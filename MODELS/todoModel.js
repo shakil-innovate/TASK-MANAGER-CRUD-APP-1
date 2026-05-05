@@ -4,7 +4,7 @@ let task=[];
 
 let c_id=1;
 
-const valid_status=["Pending","on-going", "Completed"];
+const valid_status=["Pending","On-going", "Completed"];
 
 //arrow function
 const getAllTask=()=>{
