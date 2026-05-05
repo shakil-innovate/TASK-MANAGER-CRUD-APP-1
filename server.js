@@ -3,7 +3,7 @@ const express=require("express");
 // routes
 const routes=require("./Routes/CRUD_Routes");
 
-const app=express;
+const app=express();
 const Port=3000;
 
 app.use(express.json());
@@ -14,8 +14,8 @@ app.get("/",(req,res)=>{
 });
 
 
-app.use("/",routes);
+app.use("/tasks",routes);
 
 app.listen(Port,()=>{
-    console.log(`Server running on http:\\localhost:${Port}`);
+    console.log(`Server running on http://localhost:${Port}`);
 })

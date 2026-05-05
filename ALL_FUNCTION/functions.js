@@ -1,7 +1,6 @@
-const { todo } = require("node:test");
-const todoModel=require("../models/todoModel");
+const todoModel=require("../MODELS/todoModel");
 
-const createTodo=(req,res)=>{
+const addTodo=(req,res)=>{
     try{
         console.log("POST/tasks hit");
         console.log("req.body=",req.body);
@@ -69,7 +68,7 @@ const getTaskBySearch=(req,res)=>{
 
 const getTaskByFilter=(req,res)=>{
     try{
-        const result=todoModel.getTaskByFilter(req.param.status);
+        const result=todoModel.getTaskByFilter(req.params.status);
         return res.json(result);
     }catch(error){
         return res.status(500).json({message: "server error"});
@@ -109,7 +108,7 @@ const deleteTask=(req,res)=>{
 };
 
 module.exports={
-    createTodo,
+    addTodo,
     getAllTask,
     getTaskById,
     getTaskBySearch,
