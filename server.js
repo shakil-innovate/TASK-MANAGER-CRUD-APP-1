@@ -14,8 +14,8 @@ app.get("/",(req,res)=>{
 });
 
 
-app.get("/",getAllTask);
-app.post("/",addTodo);
+app.get("/tasks",getAllTask);
+app.post("/tasks",addTodo);
 app.get("/search",getTaskBySearch);
 app.get("/filter/:status",getTaskByFilter);
 app.get("/:id",getTaskById);

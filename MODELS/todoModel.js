@@ -6,14 +6,11 @@ let c_id=1;
 
 const valid_status=["Pending","On-going", "Completed"];
 
-//arrow function
 const getAllTask=()=>{
     return task;
 }
 
 const getTaskById=(id)=>{
-    //function buildin
-    //standard function
     return task.find(function(t){
         return t.id==id;
     });
@@ -46,7 +43,6 @@ const updateTask=(id,data)=>{
         return null;
     }
 
-    //check valid status
     if(data.status && !valid_status.includes(data.status)){
         throw new Error("invalid status value");
     }
